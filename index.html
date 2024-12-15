@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Play</title>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">PLAY NFT</a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#popular-week">Popular</a>
+                <a href="#top-sellers">Top Sellers</a>
+                <a href="#explore-artworks">Explore</a>
+                <a href="#">News</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="register-btn">Register</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Discover, Collect and Sell Dope Art and NFTs</h1>
+                <p class="hero-description">The world's largest digital marketplace for crypto collections and non fungible tokens (NFTs)</p>
+                <div class="hero-buttons">
+                    <button class="discover-btn">Discover</button>
+                    <button class="create-btn">Create</button>
+                    <a href="#" class="watch-video">
+                        <i class="fas fa-video"></i>
+                        <span>Watch a video</span>
+                    </a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>27k+</h3>
+                        <p>Art Works</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20k+</h3>
+                        <p>Auctions</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7k+</h3>
+                        <p>Artists</p>
+                    </div>
+                </div>
+                <div class="active-users">
+                    <div class="user-avatars">
+                        <div class="avatar" style="background-image: url('https://i.pravatar.cc/50?img=1')"></div>
+                        <div class="avatar" style="background-image: url('https://i.pravatar.cc/50?img=2')"></div>
+                        <div class="avatar" style="background-image: url('https://i.pravatar.cc/50?img=3')"></div>
+                    </div>
+                    <p><span>40k+</span> Active Users</p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="nft-card">
+                    <div class="nft-image-container">
+                        <img src="images/one.jpg" alt="Featured NFT">
+                        <div class="image-overlay">
+                            <h3>Mystic Dreams #147</h3>
+                            <p>A mesmerizing piece of digital art that transcends reality</p>
+                            <div class="overlay-stats">
+                                <div class="stat">
+                                    <i class="fas fa-heart"></i>
+                                    <span>2.4k</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>10.2k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info-hero">
+                        <div class="auction-info">
+                            <div class="time-remaining">
+                                <span class="label">Ending in</span>
+                                <div class="countdown">
+                                    <div class="time-unit">
+                                        <span class="value">01</span>
+                                        <span class="unit">h</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="value">20</span>
+                                        <span class="unit">m</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="value">30</span>
+                                        <span class="unit">s</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bid-info">
+                                <div class="current-bid">
+                                    <span class="label">Current Bid</span>
+                                    <div class="eth-amount">
+                                        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+                                        <span class="amount">2.50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creator-info">
+                            <div class="creator-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop&q=80" alt="Creator">
+                            </div>
+                            <div class="creator-details">
+                                <div class="creator-name">Digital Artist Pro</div>
+                                <div class="creator-role">Top Seller</div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="bid-btn">Place Bid</button>
+                            <button class="view-info">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="partners">
+        <div class="partners-container">
+            <a href="#" class="partner-logo paypal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg" alt="PayPal">
+            </a>
+            <a href="#" class="partner-logo coinbase">
+                <img src="https://www.vectorlogo.zone/logos/coinbase/coinbase-ar21.svg" alt="Coinbase">
+            </a>
+            <a href="#" class="partner-logo binance">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Binance_logo.svg" alt="Binance">
+            </a>
+            <a href="#" class="partner-logo revolut">
+                <img src="https://www.vectorlogo.zone/logos/revolut/revolut-ar21.svg" alt="Revolut">
+            </a>
+            <a href="#" class="partner-logo exodus">
+                <img src="https://www.exodus.com/img/exodus-logo-white.svg" alt="Exodus">
+            </a>
+          
+        </div>
+    </section>
+
+
+    <section class="popular-week" id="popular-week">
+        <h1>Popular this week</h1>
+        <div class="popular-cards">
+            <div class="popular-cards-inner">
+                <div class="card">
+                    <img src="images/two.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Digital Decade</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>50k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Anthony gargasz</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.45 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/three.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Versace</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>48k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Antoni Tudisco</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.45 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/four.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Winter Jamz</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>47k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Antoni Tudisco</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.3 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/five.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/six.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/seven.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/eight.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/nine.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/ten.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/eleven.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/one.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/three.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/two.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Digital Decade</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>50k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Anthony gargasz</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.45 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/three.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Versace</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>48k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Antoni Tudisco</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.45 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/four.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Winter Jamz</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>47k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Antoni Tudisco</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">2.3 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/five.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/six.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/seven.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/eight.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/nine.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/ten.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/eleven.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/one.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/three.jpg" alt="NFT Art">
+                    <div class="card-info">
+                        <div class="info-top">
+                            <div class="title-row">
+                                <h3>Pastel Wifey</h3>
+                                <div class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    <span>39k</span>
+                                </div>
+                            </div>
+                            <p class="creator">by Blake Kathryn</p>
+                        </div>
+                        <div class="info-bottom">
+                            <span class="price">1.75 ETH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        
+        <section class="top-sellers" id="top-sellers">
+        <h1>Top Sellers</h1>
+        <div class="sellers-grid">
+            <div class="sellers-row">
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Haylie Arcand</h3>
+                        <p>245.5 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Breven Hughes</h3>
+                        <p>223.7 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Saige Fuentes</h3>
+                        <p>247.9 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Emma Watson</h3>
+                        <p>234.2 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>David Chen</h3>
+                        <p>189.5 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Sarah Miller</h3>
+                        <p>276.8 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Haylie Arcand</h3>
+                        <p>245.5 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Breven Hughes</h3>
+                        <p>223.7 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Saige Fuentes</h3>
+                        <p>247.9 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Emma Watson</h3>
+                        <p>234.2 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>David Chen</h3>
+                        <p>189.5 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Sarah Miller</h3>
+                        <p>276.8 Eth</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sellers-row">
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Jeremy Busch</h3>
+                        <p>201.8 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Amelie Griffith</h3>
+                        <p>234.1 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Sophie Nelson</h3>
+                        <p>256.1 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Alex Morgan</h3>
+                        <p>278.3 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Lisa Zhang</h3>
+                        <p>312.4 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>James Wilson</h3>
+                        <p>298.6 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Jeremy Busch</h3>
+                        <p>201.8 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Amelie Griffith</h3>
+                        <p>234.1 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Sophie Nelson</h3>
+                        <p>256.1 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Alex Morgan</h3>
+                        <p>278.3 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>Lisa Zhang</h3>
+                        <p>312.4 Eth</p>
+                    </div>
+                </div>
+                <div class="seller-cards">
+                    <div class="seller-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&fit=crop&q=80" alt="Seller">
+                    </div>
+                    <div class="seller-information">
+                        <h3>James Wilson</h3>
+                        <p>298.6 Eth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="explore-artworks" id="explore-artworks">
+        <h1>Explore Artworks</h1>
+        <div class="artwork-grid">
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&fit=crop&q=80" alt="Abstract Art 1">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&fit=crop&q=80" alt="Abstract Art 2">
+                        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=400&fit=crop&q=80" alt="Abstract Art 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/abstract1.jpg" alt="Abstract Art Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Abstract</h3>
+                    <span>30 items</span>
+                </div>
+            </div>
+        
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="images/3d-1.jpg" alt="3D Art 1">
+                        <img src="images/3d-2.jpg" alt="3D Art 2">
+                        <img src="images/3d-3.jpg" alt="3D Art 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/3d.jpg" alt="3D Art Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>3D Art</h3>
+                    <span>45 items</span>
+                </div>
+            </div>
+        
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="images/modern.jpg" alt="Modern Art 1">
+                        <img src="images/modern3.jpg" alt="Modern Art 2">
+                        <img src="images/modern2.jpg" alt="Modern Art 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/modern1.jpg" alt="Modern Art Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Modern Art</h3>
+                    <span>58 items</span>
+                </div>
+            </div>
+        
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="images/game2.jpg" alt="Game 1">
+                        <img src="images/game.jpg" alt="Game 2">
+                        <img src="images/game3.jpg" alt="Game 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/game1.jpg" alt="Game Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Game</h3>
+                    <span>29 items</span>
+                </div>
+            </div>
+        
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="images/grafiti.jpg" alt="Graffiti 1">
+                        <img src="images/grafiti1.jpg" alt="Graffiti 2">
+                        <img src="images/grafiti2.jpg" alt="Graffiti 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/grafiti3.jpg" alt="Graffiti Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Graffiti</h3>
+                    <span>36 items</span>
+                </div>
+            </div>
+        
+            <div class="artwork-card">
+                <div class="card-images">
+                    <div class="top-images">
+                        <img src="images/watercolor.jpg" alt="Watercolor 1">
+                        <img src="images/watercolor1.jpg" alt="Watercolor 2">
+                        <img src="images/watercolor2.jpg" alt="Watercolor 3">
+                    </div>
+                    <div class="main-image">
+                        <img src="images/watercolor3.jpg" alt="Watercolor Main">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Watercolor</h3>
+                    <span>40 items</span>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="join-community">
+        <div class="join-container">
+            <h2>Join Us to Create Sell and<br>Collect NFTs Digital Art</h2>
+            <a href="#" class="join-btn">Join Community</a>
+        </div>
+        </section>
+        
+   
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <h2>PLAY NFT</h2>
+                </div>
+                <p class="footer-description">
+                    The World's Largest Digital Marketplace for crypto collections and Non Fungible tokens (NFT) buy, sell and discover<br>
+                    exclusive digital items
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">Art</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Music</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>My Account</h3>
+                    <ul>
+                        <li><a href="#">My Collections</a></li>
+                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="#">My Favorites</a></li>
+                        <li><a href="#">Activity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Platform Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Ranking</a></li>
+                        <li><a href="#">Activity</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Registration Popup -->
+<div class="register-popup" id="registerPopup">
+    <div class="popup-content">
+        <button class="close-popup" id="closePopup">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="popup-header">
+            <h2>Create Account</h2>
+            <p>Join the NFT revolution today!</p>
+        </div>
+        <form class="register-form">
+            <div class="form-group">
+                <input type="text" id="username" required placeholder=" ">
+                <label for="username">Username</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" required placeholder=" ">
+                <label for="password">Password</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmPassword" required placeholder=" ">
+                <label for="confirmPassword">Confirm Password</label>
+            </div>
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+        <div class="social-login">
+            <p>Or continue with</p>
+            <div class="social-buttons">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NFT Details Popup -->
+<div class="nft-details-popup" id="nftDetailsPopup">
+    <div class="nft-popup-content">
+        <button class="close-nft-popup" id="closeNftPopup">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="nft-popup-grid">
+            <div class="nft-image-section">
+                <img id="popupNftImage" src="" alt="NFT Art">
+                <div class="image-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span id="popupLikes">0</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nft-info-section">
+                <h2 id="popupTitle">NFT Title</h2>
+                <div class="creator-info">
+                    <img id="popupCreatorImg" src="https://via.placeholder.com/40" alt="Creator">
+                    <div class="creator-details">
+                        <p>Created by</p>
+                        <h4 id="popupCreator">Creator Name</h4>
+                    </div>
+                </div>
+                <div class="nft-description">
+                    <h3>Description</h3>
+                    <p id="popupDescription">This unique NFT art piece represents...</p>
+                </div>
+                <div class="price-section">
+                    <div class="current-price">
+                        <span>Current Price</span>
+                        <h3 id="popupPrice">0 ETH</h3>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="nft-details">
+                    <div class="detail-item">
+                        <span>Collection</span>
+                        <p id="popupCollection">Popular Collection</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Token Standard</span>
+                        <p>ERC-721</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Blockchain</span>
+                        <p>Ethereum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Artwork Details Popup -->
+<div class="artwork-details-popup" id="artworkDetailsPopup">
+    <div class="artwork-popup-content">
+        <button class="close-artwork-popup" id="closeArtworkPopup">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="artwork-popup-grid">
+            <div class="artwork-main-section">
+                <div class="artwork-image-wrapper">
+                    <img id="popupArtworkImage" src="" alt="Artwork">
+                    <div class="artwork-overlay">
+                        <div class="artwork-stats">
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span id="popupArtworkLikes">0</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-eye"></i>
+                                <span id="popupArtworkViews">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="artwork-actions">
+                    <button class="action-btn like-btn">
+                        <i class="fas fa-heart"></i>
+                        Like
+                    </button>
+                    <button class="action-btn share-btn">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="action-btn report-btn">
+                        <i class="fas fa-flag"></i>
+                        Report
+                    </button>
+                </div>
+            </div>
+            <div class="artwork-info-section">
+                <div class="artwork-header">
+                    <h2 id="popupArtworkTitle">Artwork Title</h2>
+                    <span class="artwork-id" id="popupArtworkId">#12345</span>
+                </div>
+                <div class="artwork-creator">
+                    <img id="popupArtworkCreatorImg" src="" alt="Creator">
+                    <div class="creator-info">
+                        <span>Created by</span>
+                        <h4 id="popupArtworkCreator">Creator Name</h4>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="artwork-description">
+                    <h3>Description</h3>
+                    <p id="popupArtworkDescription">This unique artwork represents...</p>
+                </div>
+                <div class="artwork-details-grid">
+                    <div class="detail-box">
+                        <span>Collection</span>
+                        <p id="popupArtworkCollection">Explore Collection</p>
+                    </div>
+                    <div class="detail-box">
+                        <span>Category</span>
+                        <p id="popupArtworkCategory">Digital Art</p>
+                    </div>
+                    <div class="detail-box">
+                        <span>Blockchain</span>
+                        <p>Ethereum</p>
+                    </div>
+                    <div class="detail-box">
+                        <span>Token Standard</span>
+                        <p>ERC-721</p>
+                    </div>
+                </div>
+                <div class="price-history">
+                    <h3>Price History</h3>
+                    <div class="price-chart">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Price history will be available soon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artwork-footer">
+                    <div class="current-price">
+                        <span>Current Price</span>
+                        <h3 id="popupArtworkPrice">0 ETH</h3>
+                    </div>
+                    <button class="buy-artwork-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bid-modal" id="bidModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Place a Bid</h2>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="nft-preview">
+                <img src="https://cdn.dribbble.com/users/2400293/screenshots/16527147/media/f079dc5596a5fb770016c4ea506cd77b.png" alt="NFT Preview" class="modal-nft-image">
+                <div class="nft-details">
+                    <h3>Cyber Punk</h3>
+                    <p class="current-price">Current Price: <span>4.89 ETH</span></p>
+                </div>
+            </div>
+            <div class="bid-form">
+                <div class="input-group">
+                    <label for="bidAmount">Your Bid (ETH)</label>
+                    <input type="number" id="bidAmount" min="4.89" step="0.01" placeholder="Enter bid amount">
+                </div>
+                <div class="balance-info">
+                    <span>Your Balance: 8.498 ETH</span>
+                    <span>Service Fee: 0.1 ETH</span>
+                </div>
+                <button class="place-bid-confirm">Confirm Bid</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
