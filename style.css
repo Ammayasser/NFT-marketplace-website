@@ -1572,6 +1572,7 @@ body::after {
     background: transparent;
     position: relative;
     overflow: hidden;
+    opacity: 0.8;
 }
 
 .join-community::before {
@@ -1613,15 +1614,33 @@ body::after {
     z-index: -1;
     border-radius: 15rem 1rem 15rem 1rem;
 }
-
 .join-container h2 {
     color: white;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 2.5rem;
     line-height: 1.3;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    background: linear-gradient(135deg, 
+        #FF3CAC 0%, 
+        #784BA0 50%, 
+        #2B86C5 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 60, 172, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 20px rgba(255, 60, 172, 0.3);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(43, 134, 197, 0.5);
+    }
 }
 
 .join-btn {
@@ -2787,4 +2806,142 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     z-index: -1;
+}
+
+.creative-studio {
+    padding: 3rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.studio-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.studio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.studio-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #00ff87 0%, #60efff 50%, #0061ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(96, 239, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.studio-header p {
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #60efff 0%, #0061ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.studio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.studio-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.studio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(41, 84, 255, 0.2);
+    border-color: rgba(107, 46, 255, 0.3);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba(41, 84, 255, 0.2), rgba(107, 46, 255, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #2954ff, #6b2eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.studio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.studio-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.tool-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.tool-features span {
+    background: rgba(41, 84, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(107, 46, 255, 0.2);
+}
+
+.try-now-btn {
+    background: linear-gradient(135deg, #2954ff, #6b2eff);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.try-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(41, 84, 255, 0.3);
+}
+
+.studio-showcase {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .creative-studio {
+        padding: 4rem 1.5rem;
+    }
+
+    .studio-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .studio-grid {
+        grid-template-columns: 1fr;
+    }
 }
