@@ -5,6 +5,7 @@ A modern and interactive NFT (Non-Fungible Token) marketplace platform where use
 ## 🌟 Features
 
 ### Core Functionality
+
 - **NFT Exploration**: Browse through a curated collection of digital artworks and NFTs
 - **Popular Collections**: View trending NFTs and popular items of the week
 - **Top Sellers**: Discover and follow top-performing NFT creators and sellers
@@ -13,6 +14,7 @@ A modern and interactive NFT (Non-Fungible Token) marketplace platform where use
 - **User Registration**: Create an account to start collecting and trading
 
 ### User Interface
+
 - **Responsive Design**: Fully responsive layout that works on desktop and mobile devices
 - **Modern UI**: Clean and intuitive interface with smooth animations
 - **Interactive Elements**: Dynamic popups and modals for enhanced user experience
@@ -20,6 +22,7 @@ A modern and interactive NFT (Non-Fungible Token) marketplace platform where use
 - **Dark Theme**: Eye-friendly dark mode design
 
 ### Technical Features
+
 - **Three.js Integration**: Advanced 3D graphics and animations
 - **Font Awesome Icons**: High-quality icons for better visual experience
 - **Google Fonts**: Custom typography using Poppins and Orbitron fonts
@@ -39,11 +42,13 @@ A modern and interactive NFT (Non-Fungible Token) marketplace platform where use
 ## 🚀 Getting Started
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/play-nft.git
 ```
 
 2. Open the project folder
+
 ```bash
 cd play-nft
 ```
@@ -65,7 +70,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 Your Name
-- GitHub: [@yourusername](https://github.com/yourusername)
+
+- GitHub: https://github.com/Ammayasser
 
 ## 🙏 Acknowledgments
 

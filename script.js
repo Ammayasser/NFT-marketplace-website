@@ -1,3 +1,26 @@
+// Loading Screen Handler
+document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    const progressBar = document.querySelector('.progress-bar');
+    let progress = 0;
+    
+    // Simulate loading progress
+    const interval = setInterval(() => {
+        progress += Math.random() * 25;
+        if (progress > 100) progress = 100;
+        
+        progressBar.style.width = `${progress}%`;
+        
+        if (progress === 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                document.body.style.overflow = 'visible';
+            }, 500);
+        }
+    }, 200);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -176,26 +199,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Registration Popup Functionality
+    // Registration popup functionality
     const registerBtn = document.querySelector('.register-btn');
     const registerPopup = document.getElementById('registerPopup');
-    const closePopupBtn = document.getElementById('closePopup');
-    const registerForm = document.querySelector('.register-form');
+    const closePopup = document.getElementById('closePopup');
+    const authSwitches = document.querySelectorAll('.auth-switch');
+    const authForms = document.querySelectorAll('.auth-form');
 
-    // Open popup with animation
+    // Show popup when register button is clicked
     registerBtn.addEventListener('click', () => {
-        registerPopup.style.display = 'flex';
-        // Trigger reflow
-        registerPopup.offsetHeight;
         registerPopup.classList.add('active');
+        registerPopup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
-    // Close popup with animation
-    closePopupBtn.addEventListener('click', () => {
+    // Close popup when close button is clicked
+    closePopup.addEventListener('click', () => {
         registerPopup.classList.remove('active');
         setTimeout(() => {
             registerPopup.style.display = 'none';
-        }, 300);
+        }, 300); // Match the transition duration
+        document.body.style.overflow = 'auto';
     });
 
     // Close popup when clicking outside
@@ -205,37 +229,38 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 registerPopup.style.display = 'none';
             }, 300);
+            document.body.style.overflow = 'auto';
         }
     });
 
-    // Handle form submission
-    registerForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-
-        // Add your registration logic here
-        console.log('Registration submitted:', { username, email, password });
-        
-        // Optional: Show success message
-        alert('Registration successful!');
-        registerPopup.classList.remove('active');
-        setTimeout(() => {
-            registerPopup.style.display = 'none';
-            registerForm.reset();
-        }, 300);
+    // Switch between signup and login forms
+    authSwitches.forEach(switch_ => {
+        switch_.addEventListener('click', () => {
+            // Remove active class from all switches and forms
+            authSwitches.forEach(s => s.classList.remove('active'));
+            authForms.forEach(f => f.classList.remove('active'));
+            
+            // Add active class to clicked switch and corresponding form
+            switch_.classList.add('active');
+            const formType = switch_.dataset.form;
+            document.getElementById(`${formType}Form`).classList.add('active');
+        });
     });
 
-    // Social login buttons (add your authentication logic)
-    const socialButtons = document.querySelectorAll('.social-btn');
-    socialButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const platform = button.classList[1]; // google, twitter, or facebook
-            console.log(`${platform} login clicked`);
-            // Add your social login logic here
-        });
+    // Handle form submissions
+    const signupForm = document.getElementById('signupForm');
+    const loginForm = document.getElementById('loginForm');
+
+    signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your signup logic here
+        console.log('Signup form submitted');
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your login logic here
+        console.log('Login form submitted');
     });
 
     // NFT Details Popup Functionality
